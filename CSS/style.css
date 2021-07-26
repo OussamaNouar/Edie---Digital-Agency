@@ -1,0 +1,636 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    
+}
+
+
+h1{
+    font-size: clamp(1.75rem, 3vw, 3rem);
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+   font-size: clamp(1.5rem, 3vw, 2.5rem); 
+   font-weight:500 ;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size:1.125rem;
+    font-weight: 500;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: #4F4F4F;
+}
+
+a{
+    font-size: clamp(1rem, 3vw, 1.125rem);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+img {
+    max-width: 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.supporting-cta {
+    font-size: 1.125rem;
+    color:#828282;
+    font-weight: 300;
+}
+
+.container{
+    max-width: 80%;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Navigation Section */
+
+.header{
+    padding: 2.5em 0;
+}
+
+.logo{
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: black;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    transition: opacity 250ms ease;
+    position: absolute;
+    right: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: black;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+
+/* Hero Section */
+
+.hero{
+    padding: 2em 0;
+}
+
+
+
+.blue{
+    color: #2D9CDB;
+}
+
+.hero-top{
+     margin-left: 10%;
+}
+
+.hero-cta{
+    padding-top: .5em;
+    margin-bottom: 1em;
+    max-width: 90%;
+}
+
+.hero-img img{
+    border-radius: 18px;
+}
+
+.hero-bottom{
+    margin-left: 10%;
+}
+
+.herosub-cta{
+    padding: 1em 0;
+    max-width:85%;
+}
+
+.hero-text{
+    max-width: 83%;
+}
+
+.form-text{
+    margin: 1.5em 0 1em;
+    color: #828282;
+}
+
+
+
+form{
+    display: inline-flex;
+    flex-direction:row ;
+     width: 100%;
+     max-width: 300px;     
+}
+
+
+/* I have added the styling for the email and submit input once. Although I have used these inputs twice: 
+in the hero section and in the footer section. I don't know if it considered a bad way of writing code */
+
+input[type="email"]{
+  flex-grow: 2;
+  padding-right: 50px;
+    padding: 1em;
+    border-radius: 12px;
+    border: none;
+    background:#F2F2F2;
+    color: #BDBDBD;
+    font-size: 1em;
+   
+}
+
+input[type="email"]:focus{
+    outline: solid 1px gray;
+}
+
+input[type="submit"]{
+    background: #2D9CDB;
+    padding: 1.125em 1.5em;
+    margin-left: 10px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    
+}
+
+
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    opacity: .65;
+    outline: none;
+
+}
+
+
+
+/* Services Section */
+
+.services{
+    padding: 75px 0;
+}
+
+.services-header{
+    max-width: 80%;
+}
+
+.services-grid{
+    margin: 100px 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 4em;
+}
+
+.service-cards{
+ box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+ border-radius: 12px;
+}
+
+.fas{
+    font-size: 3.5rem;
+}
+
+.fa-pen-square{
+    color: #2D9CDB;
+}
+
+.fa-file-code{
+    color: #27AE60;
+}
+
+.fa-server{
+    color: #EB5757;
+}
+
+.services-btn{
+    margin-top: 3em;
+    padding: 1.5em;
+    border-radius:12px;
+    border: none;
+    background: #E0E0E0;
+    color: #828282;
+    will-change: transform;
+    transition: transform 450ms ease;
+    
+}
+
+.services-btn:hover{
+    background: #2D9CDB;
+    color: white;
+    transform: scale(1.025);
+    
+}
+
+.services-btn:focus{
+    opacity: .65;
+    outline: none;
+}
+
+.services-link{
+    color:#828282;
+}
+
+.services-link:hover{
+    color: white;
+}
+
+/* Our work section */
+
+.work-grid{
+    margin: 50px 0 25px;
+    display: grid;
+    gap: 2.5em;
+}
+
+.portofolio-image{
+    border-radius: 8px;
+}
+
+.portofolio-text{
+    margin: 0;
+}
+
+.more-work{
+    display: flex;
+}
+
+.fa-arrow-right{
+    font-size: .75em;
+    display: flex;
+    align-self: center;
+    margin-left:.5em;
+    color: #2D9CDB;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.fa-arrow-right:hover{
+    transition: transform 125ms;
+    transform:translateX(10px);
+}
+
+/* Team Section */
+
+.team{
+    padding: 75px 0;
+}
+
+.red{
+    color: #EB5757;
+}
+
+.team-text{
+    margin: .75em 0;
+}
+
+.team-information{
+    margin-bottom:2em;
+    max-width:75%;
+}
+
+.team-img{
+    border-radius: 12px;
+}
+
+.team-images{
+    display: flex;
+    gap: 1em;
+}
+
+.left{
+    display: flex;
+}
+
+.person-3{
+    display: flex;
+    align-self:center;
+}
+
+.person-1{
+    display: flex;
+}
+
+.person-2{
+    display: flex;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Testimonial Section */
+
+.testimonials{
+    padding: 50px 0;
+}
+
+.testimonial-client{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+} 
+
+.testimonial-information {
+    margin-left: 2em;
+}
+
+
+.testimonial-text{
+    font-weight: 500;
+}
+
+
+/* Scaling the image down in the testimonial section. 
+I don't know if it is the right approach for scaling down the image when it comes to being responsive */
+
+.client-image{
+    border-radius: 12px;
+    max-width:300px;
+    height: 100px;
+}
+
+.client-name{
+    margin: 0 0 .125em;
+    font-weight: 500;
+}
+
+/* footer section */
+
+ footer{
+    padding: 50px 0 20px;
+    background: #100E1D;
+}
+
+.footer-link{
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    will-change: transform;
+    transform-origin:bottom-right;
+    transition: transform 250ms ease;
+}
+
+.footer-link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+.footer-link:focus{
+    opacity: .65;
+    outline: none;
+}
+
+.footer-links{
+    margin-bottom: 1em;
+} 
+
+.footer-logo{
+    color: white;
+    font-size:1.75rem;
+}
+
+.icon-list{
+    margin-top:1em;
+    display: flex;
+    gap: 1em;
+}
+.fab{
+    color: white;
+    font-size: 1.5rem;
+    will-change: transform;
+    
+}
+
+.fab:hover{
+    transition: transform ease 250ms;
+    transform:scale(1.3);
+}
+
+.fab:focus{
+    opacity: .65;
+}
+
+.bottomform-text{
+    margin: 3.5em 0 0.5em;
+    color: white;
+}
+
+.atrribution-text {
+    text-align: center;
+    color: white;
+    margin-top: 5em;
+}
+
+.github-link{
+    color: white;
+    text-decoration: underline;
+}
+
+.github-link:hover,
+.github-link:focus{
+    opacity: .65;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width:700px){
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .nav-toggle{
+      display: none;
+  }  
+
+  .nav{
+      visibility: visible;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: auto;
+
+  }
+
+  .nav-list{
+      display: flex;
+      margin: 0;
+  }
+
+  .nav-item{
+      margin: 0 0 0 1.5em;
+  }
+
+  .nav-link{
+      display: inline-block;
+      position: relative;
+  }
+
+  .nav-link::after{
+      content: '';
+      width: 100%;
+      position: absolute;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      will-change: transform;
+      transition: transform 250ms ease;
+}
+
+.nav-link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+  .nav-link:hover{
+      transform: scaleX(1);
+  }
+
+  .work-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fullstack, .application{
+      margin-top: 150px;
+  }
+
+  .more-work{
+      justify-content: flex-end;
+  }
+
+  /* Team Section */
+
+  .team-section{
+      width: 35%;
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+  }
+
+  .team-images{
+      width: 50%;
+  }
+
+  /* Testimonial Section */
+
+  .testimonial-text{
+      max-width: 85%;
+  }
+
+  /* footer section */
+
+  .bottomform-text{
+      margin-top: 0;
+  }
+  
+}
+
+
+
+
