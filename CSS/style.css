@@ -94,56 +94,37 @@ li{
     width: 100%;
 }
 
-.nav-toggle {
-    cursor: pointer;
-    border: 0;
-    width: 3em;
-    height: 3em;
-    padding: 0em;
-    border-radius: 50%;
-    transition: opacity 250ms ease;
-    position: absolute;
-    right: 0;
+.header-content{
+    display: flex;
+    justify-content: space-between;
 }
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-    opacity: .75;
-}
 
-.hamburger {
-    width: 50%;
-    position: relative;
-}
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    background: black;
-}
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    width: 100%;
-}
-
-.hamburger::before {
-    transform: translateY(-6px);
-}
-
-.hamburger::after {
-    transform: translateY(3px);
-}
 
 .nav {
     visibility: hidden;
     height: 0;
     position: absolute;
 }
+
+.hamburger-button{
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger-button__bar{
+    height: 3px;
+    width: 22px;
+    background-color:black;
+    margin-top: 4px;
+    border-radius: 2px;
+
+}
+
 
 
 /* Hero Section */
@@ -159,7 +140,7 @@ li{
 }
 
 .hero-top{
-     margin-left: 10%;
+     transform: translateX(10%);
 }
 
 .hero-cta{
@@ -173,7 +154,7 @@ li{
 }
 
 .hero-bottom{
-    margin-left: 10%;
+    transform: translateX(10%);
 }
 
 .herosub-cta{
@@ -552,6 +533,10 @@ I don't know if it is the right approach for scaling down the image when it come
       width: 100%;
       height: auto;
 
+  }
+
+  .hamburger-button{
+      visibility: hidden;
   }
 
   .nav-list{
