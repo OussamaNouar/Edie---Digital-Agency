@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://edie-landingpage.netlify.app/">
+    <a href="https://edie-landingpage.netlify.app/" target="_blank">
       Demo
     </a>
     <span> | </span>
